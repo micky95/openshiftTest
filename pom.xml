@@ -5,7 +5,7 @@
     <groupId>org.openshift</groupId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>InsultApp</name>
+    <name>openshiftTest</name>
   
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -46,7 +46,7 @@
      <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
      <id>openshift</id>
      <build>
-        <finalName>InsultApp</finalName>
+        <finalName>openshiftTest</finalName>
         <plugins>
           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -62,5 +62,5 @@
       </build>
     </profile>
   </profiles>
-	<artifactId>InsultApp</artifactId>
+	<artifactId>openshiftTest</artifactId>
 </project>
