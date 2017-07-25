@@ -6,7 +6,8 @@ import java.sql.Statement;
 
 public class AudioProcessor {
 	
-	public void process() {
+	public String process() {
+		String res="";
 		
 		try{
             String databaseURL = "jdbc:postgresql://";
@@ -16,8 +17,9 @@ public class AudioProcessor {
             String password = System.getenv("PGPASSWORD");
             Connection connection = DriverManager.getConnection(databaseURL, username,
             password);
+            
             if (connection != null) {
-            	System.out.println("tis gelukt!!");
+            	return "tis gelukt!!";
 //                String SQL = "select a.string AS first, b.string AS second, c.string AS noun from short_adjective a , long_adjective b, noun c ORDER BY random() limit 1";
 //                Statement stmt = connection.createStatement();
 //                ResultSet rs = stmt.executeQuery(SQL);
@@ -32,8 +34,10 @@ public class AudioProcessor {
             connection.close();
         
     } catch (Exception e) {
-        System.out.print( "Database connection problem!");
+        return "Database connection problem!";
       }
+		return res;
+		
 	}
 
 }
