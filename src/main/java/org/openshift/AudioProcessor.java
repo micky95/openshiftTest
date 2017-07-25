@@ -1,4 +1,4 @@
-package openshiftTest;
+package org.openshift;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
 import java.sql.Connection;
